@@ -1,0 +1,203 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  height: 9rem;
+  padding: 0 3.5rem;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.2rem;
+  align-items: center;
+  // background-color: red;
+  // padding-left: 2.5rem;
+
+  &__icon {
+    height: 5.3rem;
+    width: auto;
+    // background-color: yellow;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    color: $color-white;
+    color: #eafffc;
+    // background-color: rgba(0, 0, 255, 0.392);
+    line-height: 1;
+
+    &-formate {
+      font-size: 4.15rem;
+      font-weight: 600;
+      //   background-color: rgba(255, 192, 203, 0.451);
+    }
+    &-sub {
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 6.5rem;
+  justify-content: space-between;
+  // padding-right: 3rem;
+
+  &__btn:link,
+  &__btn:visited {
+    padding: 0.4rem 0;
+    font-size: 2.2rem;
+    background-color: transparent;
+    font-size: 2.4rem;
+    color: white;
+    font-weight: 400;
+    position: relative;
+  }
+
+  &__btn {
+    &--red {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: $color-menu-red;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: $color-menu-red;
+      }
+    }
+
+    &--orange {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: $color-menu-orange;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: $color-menu-orange;
+      }
+    }
+
+    &--yellow {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: $color-menu-yellow;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: $color-menu-yellow;
+      }
+    }
+
+    &--green {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: $color-menu-green;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: $color-menu-green;
+      }
+    }
+
+    &--blue {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: $color-menu-blue;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: #86c9ff;
+      }
+    }
+
+    &--purple {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 4.5px;
+        background-color: #9672ff;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+      &:active {
+        color: #bfaaff;
+      }
+    }
+  }
+}
+.access {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-content: center;
+  gap: 3.5rem;
+  //   background-color: beige;
+
+  color: $color-primary;
+
+  &__login {
+    color: inherit;
+    align-self: center;
+    font-weight: 600;
+    transition: text-decoration 2s;
+    font-size: 2rem;
+    &:hover {
+      //   text-decoration: underline;
+      color: $color-primary-light-1;
+    }
+    &:active {
+      color: $color-primary-dark-1;
+    }
+  }
+
+  &__plan {
+    color: inherit;
+  }
+}

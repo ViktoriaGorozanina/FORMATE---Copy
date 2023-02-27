@@ -1,0 +1,50 @@
+.btn {
+  outline-color: transparent;
+  letter-spacing: 1px;
+
+  &:link,
+  &:visited {
+  }
+
+  &:hover,
+  &:active {
+  }
+
+  &__full:link,
+  &__full:visited {
+    padding: 0.8rem 3.2rem;
+    border: solid 3px $color-primary;
+    border-radius: 100px;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: $color-primary;
+    color: white;
+  }
+
+  &__full:hover {
+    color: $color-primary;
+    background-color: white;
+  }
+  &__full:active {
+    background-color: #e7fffd;
+  }
+
+  &__outline:link,
+  &__outline:visited {
+    padding: 0.8rem 3.2rem;
+    border: solid 3px $color-primary;
+    color: $color-primary;
+    border-radius: 100px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__outline:hover {
+    color: white;
+    background-color: $color-primary;
+  }
+  &__outline:active {
+    background-color: $color-primary-light-1;
+    border-color: $color-primary-light-1;
+  }
+}
