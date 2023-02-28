@@ -1,44 +1,5 @@
 .main {
-  max-width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  //   background-color: aqua;
-  height: 70vh;
-  align-items: center;
-  margin-top: 2rem;
-
-  // &__presentation {
-  //   // background-color: yellow;
-  //   // padding-left: 3rem;
-  // }
-  &__headline {
-    font-family: Rubik;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 4rem;
-    margin-bottom: 2.5rem;
-    color: $color-primary;
-    line-height: 1.2;
-    letter-spacing: 1.4px;
-  }
-
-  &__text {
-    font-family: Rubik;
-    max-width: 48ch;
-    font-size: 2.4rem;
-    line-height: 1.4;
-    margin-bottom: 4.5rem;
-  }
-
-  &__img-box {
-    // background-color: coral;
-    display: grid;
-    justify-items: end;
-  }
-  &__img-asset {
-    width: 90%;
-    height: auto;
-    // transform: translateX(7%);
-  }
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
 }

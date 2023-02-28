@@ -42,14 +42,13 @@
 
 .nav {
   display: flex;
-  gap: 6.5rem;
+  min-width: 70rem;
+  width: 45%;
   justify-content: space-between;
-  // padding-right: 3rem;
 
   &__btn:link,
   &__btn:visited {
     padding: 0.4rem 0;
-    font-size: 2.2rem;
     background-color: transparent;
     font-size: 2.4rem;
     color: white;
@@ -180,20 +179,35 @@
   gap: 3.5rem;
   //   background-color: beige;
 
-  color: $color-primary;
+  color: $color-white;
 
   &__login {
     color: inherit;
     align-self: center;
-    font-weight: 600;
+    font-weight: 400;
     transition: text-decoration 2s;
-    font-size: 2rem;
-    &:hover {
-      //   text-decoration: underline;
-      color: $color-primary-light-1;
+    padding: 0.4rem 0;
+    font-size: 2.4rem;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      background-color: $color-white;
+      width: 0%;
+      transition: width 0.2s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+    &:active::after {
+      background-color: $color-primary-light-3;
     }
     &:active {
-      color: $color-primary-dark-1;
+      color: $color-primary-light-3;
     }
   }
 
