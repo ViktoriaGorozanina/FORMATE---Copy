@@ -1,19 +1,87 @@
 .main-news {
   // background-color: aqua;
-  width: 100vw;
-}
-
-.news {
-  // background-color: rgb(172, 172, 255);
   max-width: 76vw;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 5rem;
+}
+
+//! +++++++++++++ IMPORTANT ++++++++++++++
+.important {
   display: flex;
   gap: 5rem;
   flex-direction: column;
   padding-top: 10rem;
 
   &__div {
+    background-color: $color-primary;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    height: 45rem;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    position: relative;
+    // border: solid 5px$color-white;
+  }
+
+  &__figure {
+    // align-self: center;
+  }
+  &__img {
+    height: 14rem;
+    width: 100%;
+    border-radius: 4px;
+    transform: translateY(2.3px);
+  }
+
+  &__header {
+    // background-color: rgb(169, 234, 255);
+    padding-top: 1rem;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+  &__date {
+    font-size: 1.5rem;
+    align-self: start;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  &__text {
+    // background-color: rgb(136, 26, 140);
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+    overflow: hidden; /* hide overflowing text */
+  }
+
+  &__read {
+    // background-color: rgb(26, 140, 51);
+    font-size: 1.4rem;
+    justify-self: end;
+    padding-right: 2.3rem;
+    padding-top: 2rem;
+    color: $color-accent-light-1;
+  }
+}
+
+//! +++++++++++++ NEWS ++++++++++++++
+.news {
+  // background-color: rgb(172, 172, 255);
+  // max-width: 76vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 5rem;
+  flex-direction: column;
+  padding-top: 10rem;
+  position: relative;
+
+  &__div {
     // background-color: yellow;
+    background-color: rgb(255, 255, 255);
     padding: 3rem;
     border-radius: 5px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
@@ -25,7 +93,19 @@
     align-content: center;
     color: $color-grey-dark-3;
     position: relative;
-    // border: solid 5px$color-white;
+
+    &:first-child::after {
+      content: "new";
+      position: absolute;
+      padding: 0.3rem 3rem;
+      background-color: $color-accent;
+      top: 2rem;
+      right: 0;
+      transform: translateX(20%);
+      font-size: 1.8rem;
+      color: $color-white;
+      letter-spacing: 1.2px;
+    }
   }
 
   &__figure {
@@ -53,7 +133,7 @@
   }
   &__text {
     // background-color: rgb(136, 26, 140);
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 400;
     width: 100%;
     overflow: hidden; /* hide overflowing text */
