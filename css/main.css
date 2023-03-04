@@ -383,6 +383,20 @@ a {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   gap: 5rem;
+  padding-bottom: 50rem;
+}
+
+.column-type {
+  font-size: 2rem;
+  font-weight: 400;
+  left: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .important {
@@ -394,11 +408,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 10rem;
+  position: relative;
 }
 .important__div {
   background-color: #087f73;
-  padding: 3rem;
+  padding: 3rem 3rem 1.05rem 3rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
@@ -406,26 +420,40 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   color: #f7faf9;
   position: relative;
+  overflow: hidden;
+}
+.important__div::after {
+  content: "";
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #f06595;
+  left: 0;
+  z-index: 0;
 }
 .important__img {
-  height: 14rem;
+  height: 15rem;
   width: 100%;
   border-radius: 4px;
-  -webkit-transform: translateY(2.3px);
-      -ms-transform: translateY(2.3px);
-          transform: translateY(2.3px);
+  -webkit-transform: translateY(-2.3px);
+      -ms-transform: translateY(-2.3px);
+          transform: translateY(-2.3px);
 }
 .important__header {
-  padding-top: 1rem;
   text-transform: uppercase;
   font-size: 2.4rem;
   font-weight: 500;
+  color: #fcc2d7;
 }
 .important__date {
   font-size: 1.5rem;
@@ -439,13 +467,18 @@ a {
   font-weight: 400;
   width: 100%;
   overflow: hidden; /* hide overflowing text */
+  padding-bottom: 2.5rem;
 }
 .important__read {
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
   justify-self: end;
-  padding-right: 2.3rem;
-  padding-top: 2rem;
-  color: #faa2c1;
+  color: #f7faf9;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: end;
+  z-index: 1;
+  text-transform: uppercase;
 }
 
 .news {
@@ -458,7 +491,6 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 10rem;
   position: relative;
 }
 .news__div {

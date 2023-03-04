@@ -5,6 +5,18 @@
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   gap: 5rem;
+  padding-bottom: 50rem;
+}
+
+.column-type {
+  font-size: 2rem;
+  font-weight: 400;
+  left: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding-top: 4rem;
+  padding-left: 2rem;
+  transform: translateY(50%);
 }
 
 //! +++++++++++++ IMPORTANT ++++++++++++++
@@ -12,37 +24,48 @@
   display: flex;
   gap: 5rem;
   flex-direction: column;
-  padding-top: 10rem;
+  position: relative;
+  // background-color: red;
 
   &__div {
     background-color: $color-primary;
-    padding: 3rem;
+    padding: 3rem 3rem 1.05rem 3rem;
     border-radius: 5px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     height: 45rem;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     color: $color-white;
     position: relative;
-    // border: solid 5px$color-white;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      height: 5rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: $color-accent;
+      left: 0;
+      z-index: 0;
+    }
   }
 
   &__figure {
-    // align-self: center;
   }
   &__img {
-    height: 14rem;
+    height: 15rem;
     width: 100%;
     border-radius: 4px;
-    transform: translateY(2.3px);
+    transform: translateY(-2.3px);
   }
 
   &__header {
-    // background-color: rgb(169, 234, 255);
-    padding-top: 1rem;
     text-transform: uppercase;
     font-size: 2.4rem;
     font-weight: 500;
+    color: $color-accent-light-2;
   }
   &__date {
     font-size: 1.5rem;
@@ -56,15 +79,21 @@
     font-weight: 400;
     width: 100%;
     overflow: hidden; /* hide overflowing text */
+    padding-bottom: 2.5rem;
   }
 
   &__read {
     // background-color: rgb(26, 140, 51);
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-weight: 500;
     justify-self: end;
-    padding-right: 2.3rem;
-    padding-top: 2rem;
-    color: $color-accent-light-1;
+    // padding: 0.5rem 3rem;
+    color: $color-white;
+    // background-color: $color-accent;
+    align-self: center;
+    justify-self: end;
+    z-index: 1;
+    text-transform: uppercase;
   }
 }
 
@@ -76,7 +105,6 @@
   display: flex;
   gap: 5rem;
   flex-direction: column;
-  padding-top: 10rem;
   position: relative;
 
   &__div {
