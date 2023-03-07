@@ -114,15 +114,15 @@
     padding: 3rem;
     border-radius: 5px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
-    height: 30rem;
+    height: 20rem;
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content min-content 5rem 4rem;
+    grid-template-rows: min-content min-content 5rem 4rem 20rem;
     column-gap: 3.3rem;
     align-content: start;
-
     color: $color-grey-dark-3;
     position: relative;
+    transition: all 0.3s ease-in-out;
 
     &:first-child::after {
       content: "new";
@@ -141,7 +141,7 @@
   &__figure {
     grid-row: 1 / span 4;
     align-self: start;
-    transform: translateY(2.5px);
+    // transform: translateY(2.5px);
   }
   &__img {
     height: 14.5rem;
@@ -167,20 +167,26 @@
     // background-color: rgb(136, 26, 140);
     font-size: 1.6rem;
     font-weight: 400;
-    width: 100%;
-    overflow: hidden; /* hide overflowing text */
+    transition: opacity 0.3s ease-in-out;
+
+    &--preview {
+      overflow: hidden;
+    }
+
+    &--long {
+      opacity: 0;
+      grid-column: 1 / -1;
+      padding: 0.5rem 0;
+      width: 90ch;
+    }
   }
 
-  &__text--long {
-    opacity: 0;
-    grid-column: 1 / -1;
-  }
   &__read {
     // background-color: rgb(26, 140, 51);
     font-size: 1.4rem;
     position: absolute;
     bottom: 2rem;
-    right: 2rem;
+    right: 3rem;
     color: $color-primary;
     &:hover {
       transform: scale(1.03);
@@ -195,6 +201,7 @@
     transform: translateX(-50%);
     height: 1.6rem;
     width: 1.6rem;
+    transition: transform 0.3s;
 
     &:hover {
       transform: translateY(15%) translateX(-50%);
@@ -202,13 +209,23 @@
   }
 
   &__checkbox {
-    // display: none;
+    display: none;
   }
 
-  // &__checkbox:checked .news__div {
-  //   height: 40rem;
-  // }
-  &__checkbox[name="news-toggle"]:checked &__text--long {
-    opacity: 1 !important;
+  //* ------- FUNCTIONALITY -------
+
+  &__div:has(> .news__checkbox:checked) {
+    height: 45rem;
+  }
+  &__checkbox:checked ~ &__text--preview {
+    overflow: unset;
+  }
+
+  &__checkbox:checked ~ &__text--long {
+    opacity: 1;
+  }
+  &__checkbox:checked ~ &__arrow {
+    transform: rotate(180deg) translateX(50%);
+    transform-origin: center;
   }
 }
