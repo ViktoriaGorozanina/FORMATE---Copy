@@ -382,6 +382,9 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 5rem;
   padding-bottom: 50rem;
 }
@@ -399,10 +402,11 @@ a {
           transform: translateY(50%);
 }
 
-.important {
+.hype {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  min-width: 33rem;
   gap: 5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -410,12 +414,12 @@ a {
           flex-direction: column;
   position: relative;
 }
-.important__div {
+.hype__div {
   background-color: #087f73;
   padding: 3rem 3rem 1.05rem 3rem;
   border-radius: 5px;
-  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   height: 45rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +435,7 @@ a {
   position: relative;
   overflow: hidden;
 }
-.important__div::after {
+.hype__div::after {
   content: "";
   height: 5rem;
   width: 100%;
@@ -441,35 +445,44 @@ a {
   left: 0;
   z-index: 0;
 }
-.important__img {
-  height: 15rem;
+.hype__figure {
+  background-position: center;
+  background-size: cover;
+  height: 13rem;
   width: 100%;
   border-radius: 4px;
   -webkit-transform: translateY(-2.3px);
       -ms-transform: translateY(-2.3px);
           transform: translateY(-2.3px);
 }
-.important__header {
+.hype__figure--1 {
+  background-image: url(/Assets/img/hands.jpg);
+}
+.hype__figure--2 {
+  background-image: url(/Assets/img/soaps.jpeg);
+}
+.hype__header {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  line-height: normal;
   font-weight: 500;
   color: #fcc2d7;
 }
-.important__date {
+.hype__date {
   font-size: 1.5rem;
   -ms-flex-item-align: start;
       align-self: start;
-  margin-bottom: 1.2rem;
   font-style: italic;
 }
-.important__text {
+.hype__text {
   font-size: 1.6rem;
   font-weight: 400;
   width: 100%;
   overflow: hidden; /* hide overflowing text */
   padding-bottom: 2.5rem;
+  letter-spacing: 0.55px;
 }
-.important__read {
+.hype__cta {
   font-size: 2rem;
   font-weight: 500;
   justify-self: end;
@@ -479,6 +492,14 @@ a {
   justify-self: end;
   z-index: 1;
   text-transform: uppercase;
+}
+.hype__cta:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
 }
 
 .news {
@@ -500,8 +521,8 @@ a {
   background-color: rgb(255, 255, 255);
   padding: 3rem;
   border-radius: 5px;
-  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   height: 20rem;
   display: grid;
   grid-template-columns: -webkit-min-content 1fr;

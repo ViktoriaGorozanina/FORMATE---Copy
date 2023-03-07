@@ -4,6 +4,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
+  justify-content: center;
   gap: 5rem;
   padding-bottom: 50rem;
 }
@@ -19,9 +20,10 @@
   transform: translateY(50%);
 }
 
-//! +++++++++++++ IMPORTANT ++++++++++++++
-.important {
+//! +++++++++++++ HYPE ++++++++++++++
+.hype {
   display: flex;
+  min-width: 33rem;
   gap: 5rem;
   flex-direction: column;
   position: relative;
@@ -31,7 +33,7 @@
     background-color: $color-primary;
     padding: 3rem 3rem 1.05rem 3rem;
     border-radius: 5px;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     height: 45rem;
     display: flex;
     justify-content: space-between;
@@ -53,24 +55,30 @@
   }
 
   &__figure {
-  }
-  &__img {
-    height: 15rem;
+    background-position: center;
+    background-size: cover;
+    height: 13rem;
     width: 100%;
     border-radius: 4px;
     transform: translateY(-2.3px);
+    &--1 {
+      background-image: url(/Assets/img/hands.jpg);
+    }
+    &--2 {
+      background-image: url(/Assets/img/soaps.jpeg);
+    }
   }
 
   &__header {
     text-transform: uppercase;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
+    line-height: normal;
     font-weight: 500;
     color: $color-accent-light-2;
   }
   &__date {
     font-size: 1.5rem;
     align-self: start;
-    margin-bottom: 1.2rem;
     font-style: italic;
   }
   &__text {
@@ -80,9 +88,10 @@
     width: 100%;
     overflow: hidden; /* hide overflowing text */
     padding-bottom: 2.5rem;
+    letter-spacing: 0.55px;
   }
 
-  &__read {
+  &__cta {
     // background-color: rgb(26, 140, 51);
     font-size: 2rem;
     font-weight: 500;
@@ -94,6 +103,10 @@
     justify-self: end;
     z-index: 1;
     text-transform: uppercase;
+    &:hover {
+      transform: scale(1.05);
+      transform-origin: top;
+    }
   }
 }
 
@@ -113,7 +126,7 @@
     background-color: rgb(255, 255, 255);
     padding: 3rem;
     border-radius: 5px;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     height: 20rem;
     display: grid;
     grid-template-columns: min-content 1fr;
