@@ -283,6 +283,20 @@ a {
   color: inherit;
 }
 
+.footer {
+  background-color: #087f73;
+  width: 100vw;
+  height: 50rem;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #f7faf9;
+}
+.footer__div {
+  background-color: yellow;
+  height: 100%;
+  width: 135rem;
+}
+
 .intro {
   background-image: url(/Assets/img/intro-bg-green.jpg);
   background-size: cover;
@@ -377,22 +391,41 @@ a {
           transform: translateY(-2px);
 }
 
+.hype__figure--3 {
+  background-image: url(/Assets/img/SOap40.jpg);
+}
+.hype__figure--2 {
+  background-image: url(/Assets/img/soaps.jpeg);
+}
+.hype__figure--1 {
+  background-image: url(/Assets/img/hands.jpg);
+}
+
+.news__figure--3 {
+  background-image: url(/Assets/img/diana-polekhina-Hzz7AEyLhZk-unsplash.jpg);
+}
+.news__figure--2 {
+  background-image: url(/Assets/img/content-pixie-WdJ4WnLxyDs-unsplash.jpg);
+}
+.news__figure--1 {
+  background-image: url(/Assets/img/intro-bg-green.jpg);
+}
+
 .main-news {
-  max-width: 76vw;
+  max-width: 135rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2.3fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 5rem;
-  padding-bottom: 50rem;
+  padding-bottom: 40rem;
 }
 
 .column-type {
   font-size: 2rem;
   font-weight: 400;
-  left: 2rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   padding-top: 4rem;
@@ -403,10 +436,10 @@ a {
 }
 
 .hype {
+  min-width: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-width: 33rem;
   gap: 5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -461,6 +494,9 @@ a {
 .hype__figure--2 {
   background-image: url(/Assets/img/soaps.jpeg);
 }
+.hype__figure--3 {
+  background-image: url(/Assets/img/SOap40.jpg);
+}
 .hype__header {
   text-transform: uppercase;
   font-size: 2.2rem;
@@ -477,7 +513,6 @@ a {
 .hype__text {
   font-size: 1.6rem;
   font-weight: 400;
-  width: 100%;
   overflow: hidden; /* hide overflowing text */
   padding-bottom: 2.5rem;
   letter-spacing: 0.55px;
@@ -503,7 +538,7 @@ a {
 }
 
 .news {
-  margin: 0 auto;
+  min-width: 82rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,8 +567,6 @@ a {
   -webkit-column-gap: 3.3rem;
      -moz-column-gap: 3.3rem;
           column-gap: 3.3rem;
-  -ms-flex-line-pack: start;
-      align-content: start;
   color: #2d373a;
   position: relative;
   -webkit-transition: all 0.3s ease-in-out;
@@ -557,11 +590,14 @@ a {
 .news__figure {
   grid-row: 1/span 4;
   align-self: start;
-}
-.news__img {
+  -webkit-transform: translateY(-2.3px);
+      -ms-transform: translateY(-2.3px);
+          transform: translateY(-2.3px);
   height: 14.5rem;
   width: 14.5rem;
   border-radius: 4px;
+  background-size: cover;
+  background-position: center;
 }
 .news__header {
   padding-top: 0.3rem;
@@ -589,7 +625,7 @@ a {
   opacity: 0;
   grid-column: 1/-1;
   padding: 0.5rem 0;
-  width: 90ch;
+  max-width: 90ch;
 }
 .news__read {
   font-size: 1.4rem;

@@ -1,18 +1,42 @@
+// ---------NEWS IMPORT-------
+.hype__figure {
+  &--3 {
+    background-image: url(/Assets/img/SOap40.jpg);
+  }
+  &--2 {
+    background-image: url(/Assets/img/soaps.jpeg);
+  }
+  &--1 {
+    background-image: url(/Assets/img/hands.jpg);
+  }
+}
+
+.news__figure {
+  &--3 {
+    background-image: url(/Assets/img/diana-polekhina-Hzz7AEyLhZk-unsplash.jpg);
+  }
+  &--2 {
+    background-image: url(/Assets/img/content-pixie-WdJ4WnLxyDs-unsplash.jpg);
+  }
+  &--1 {
+    background-image: url(/Assets/img/intro-bg-green.jpg);
+  }
+}
+
 .main-news {
   // background-color: aqua;
-  max-width: 76vw;
+  max-width: 135rem;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2.5fr;
+  grid-template-columns: 1fr 2.3fr;
   justify-content: center;
   gap: 5rem;
-  padding-bottom: 50rem;
+  padding-bottom: 40rem;
 }
 
 .column-type {
   font-size: 2rem;
   font-weight: 400;
-  left: 2rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   padding-top: 4rem;
@@ -22,8 +46,8 @@
 
 //! +++++++++++++ HYPE ++++++++++++++
 .hype {
+  min-width: 35rem;
   display: flex;
-  min-width: 33rem;
   gap: 5rem;
   flex-direction: column;
   position: relative;
@@ -67,6 +91,9 @@
     &--2 {
       background-image: url(/Assets/img/soaps.jpeg);
     }
+    &--3 {
+      background-image: url(/Assets/img/SOap40.jpg);
+    }
   }
 
   &__header {
@@ -85,7 +112,6 @@
     // background-color: rgb(136, 26, 140);
     font-size: 1.6rem;
     font-weight: 400;
-    width: 100%;
     overflow: hidden; /* hide overflowing text */
     padding-bottom: 2.5rem;
     letter-spacing: 0.55px;
@@ -113,8 +139,7 @@
 //! +++++++++++++ NEWS ++++++++++++++
 .news {
   // background-color: rgb(172, 172, 255);
-  // max-width: 76vw;
-  margin: 0 auto;
+  min-width: 82rem;
   display: flex;
   gap: 5rem;
   flex-direction: column;
@@ -132,7 +157,6 @@
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content 5rem 4rem 20rem;
     column-gap: 3.3rem;
-    align-content: start;
     color: $color-grey-dark-3;
     position: relative;
     transition: all 0.3s ease-in-out;
@@ -154,13 +178,12 @@
   &__figure {
     grid-row: 1 / span 4;
     align-self: start;
-    // transform: translateY(2.5px);
-  }
-  &__img {
+    transform: translateY(-2.3px);
     height: 14.5rem;
     width: 14.5rem;
     border-radius: 4px;
-    // transform: translateY(2.3px);
+    background-size: cover;
+    background-position: center;
   }
 
   &__header {
@@ -190,7 +213,7 @@
       opacity: 0;
       grid-column: 1 / -1;
       padding: 0.5rem 0;
-      width: 90ch;
+      max-width: 90ch;
     }
   }
 
