@@ -24,8 +24,21 @@ body {
   background-color: rgb(247, 247, 247);
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
+}
+
+a:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid #ff922b;
+  padding: 0 1rem;
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 .btn {
@@ -285,16 +298,85 @@ a {
 
 .footer {
   background-color: #087f73;
-  width: 100vw;
-  height: 50rem;
-  padding: 10rem 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 10rem 0 0 0;
+  padding: 4rem 0;
   font-size: 1.4rem;
   color: #f7faf9;
 }
 .footer__div {
-  background-color: yellow;
+  margin: 0 auto;
   height: 100%;
-  width: 135rem;
+  max-width: 130rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__header {
+  padding-bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid 1px #f7faf9;
+}
+.footer__logo {
+  height: 3rem;
+  width: auto;
+}
+.footer__body {
+  padding: 3rem 0;
+  border-bottom: solid 1px #f7faf9;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 1.8rem;
+  font-weight: 200;
+  letter-spacing: 0.07ch;
+}
+.footer__body li:first-child {
+  font-weight: 400;
+}
+.footer__body--contact {
+  justify-self: center;
+}
+.footer__body--partners {
+  justify-self: end;
+  margin-right: 2rem;
+}
+.footer__bottom {
+  padding-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__privacy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  color: #f7faf9;
+}
+.footer__privacy--policy {
+  color: inherit;
+}
+.footer__privacy--cookies {
+  color: inherit;
 }
 
 .intro {
@@ -512,7 +594,7 @@ a {
 }
 .hype__text {
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
   overflow: hidden; /* hide overflowing text */
   padding-bottom: 2.5rem;
   letter-spacing: 0.55px;
