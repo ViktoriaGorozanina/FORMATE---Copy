@@ -303,7 +303,7 @@ button:focus-visible {
   height: -moz-max-content;
   height: max-content;
   margin: 10rem 0 0 0;
-  padding: 4rem 0;
+  padding: 4rem 0 3rem 0;
   font-size: 1.4rem;
   color: #f7faf9;
 }
@@ -347,7 +347,8 @@ button:focus-visible {
   letter-spacing: 0.07ch;
 }
 .footer__body li:first-child {
-  font-weight: 400;
+  font-weight: 500;
+  padding-bottom: 1rem;
 }
 .footer__body--contact {
   justify-self: center;

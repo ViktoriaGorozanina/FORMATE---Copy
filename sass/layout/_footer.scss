@@ -3,7 +3,7 @@
   width: 100%;
   height: max-content;
   margin: 10rem 0 0 0;
-  padding: 4rem 0;
+  padding: 4rem 0 3rem 0;
   font-size: 1.4rem;
   color: $color-white;
 
@@ -40,7 +40,8 @@
     font-weight: 200;
     letter-spacing: 0.07ch;
     li:first-child {
-      font-weight: 400;
+      font-weight: 500;
+      padding-bottom: 1rem;
     }
     &--contact {
       justify-self: center;
