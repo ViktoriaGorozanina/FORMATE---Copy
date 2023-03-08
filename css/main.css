@@ -134,9 +134,10 @@ button:focus-visible {
 .nav__btn:link, .nav__btn:visited {
   padding: 0.4rem 0;
   background-color: transparent;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.05ch;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
 }
 .nav__btn--red::after {
@@ -320,6 +321,9 @@ button:focus-visible {
           flex-direction: column;
 }
 
+.footer a {
+  color: #f7faf9;
+}
 .footer__header {
   padding-bottom: 3rem;
   display: -webkit-box;
@@ -371,13 +375,6 @@ button:focus-visible {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
-  color: #f7faf9;
-}
-.footer__privacy--policy {
-  color: inherit;
-}
-.footer__privacy--cookies {
-  color: inherit;
 }
 
 .intro {
@@ -567,18 +564,6 @@ button:focus-visible {
   height: 13rem;
   width: 100%;
   border-radius: 4px;
-  -webkit-transform: translateY(-2.3px);
-      -ms-transform: translateY(-2.3px);
-          transform: translateY(-2.3px);
-}
-.hype__figure--1 {
-  background-image: url(/Assets/img/hands.jpg);
-}
-.hype__figure--2 {
-  background-image: url(/Assets/img/soaps.jpeg);
-}
-.hype__figure--3 {
-  background-image: url(/Assets/img/SOap40.jpg);
 }
 .hype__header {
   text-transform: uppercase;

@@ -18,6 +18,10 @@
 }
 
 .footer {
+  a {
+    color: $color-white;
+  }
+
   &__header {
     // background-color: pink;
     padding-bottom: 3rem;
@@ -61,12 +65,5 @@
   &__privacy {
     display: flex;
     gap: 3rem;
-    color: $color-white;
-    &--policy {
-      color: inherit;
-    }
-    &--cookies {
-      color: inherit;
-    }
   }
 }
