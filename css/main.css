@@ -346,7 +346,7 @@ button:focus-visible {
       -ms-flex-pack: justify;
           justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 200;
   letter-spacing: 0.07ch;
 }
