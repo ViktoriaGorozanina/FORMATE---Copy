@@ -1,28 +1,27 @@
 .ham-nav {
   // background-color: pink;
-  visibility: hidden;
+  display: none;
 }
 
+.blur {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 6rem;
+  left: -50rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  backdrop-filter: blur(2.2px);
+  display: none;
+}
 @media only screen and (max-width: 1080px) {
-  .blur {
-    content: "";
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 6rem;
-    left: -90rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: -1;
-    backdrop-filter: blur(2.2px);
-    visibility: hidden;
-  }
-
   .ham-nav {
-    visibility: visible;
+    display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 50px;
+    right: 2.3rem;
 
     z-index: 3;
   }
@@ -155,7 +154,7 @@
   #menuToggle input:checked ~ ul {
     transform: none;
   }
-  #menuToggle input:checked + div.blur {
-    visibility: visible;
+  #menuToggle input:checked > .blur {
+    display: block;
   }
 }
