@@ -1,10 +1,12 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color-primary;
   height: 9rem;
   padding: 0 3.5rem;
+  z-index: 3;
 }
 
 .logo {
@@ -12,6 +14,7 @@
   grid-template-columns: min-content 1fr;
   gap: 1.2rem;
   align-items: center;
+  z-index: 6;
   // background-color: red;
   // padding-left: 2.5rem;
 
@@ -41,134 +44,139 @@
 }
 
 .nav {
-  display: flex;
-  min-width: 70rem;
-  width: 45%;
-  justify-content: space-between;
+  display: none;
+}
+@media only screen and (min-width: 1080px) {
+  .nav {
+    display: flex;
+    min-width: 70rem;
+    width: 45%;
+    justify-content: space-between;
 
-  &__btn:link,
-  &__btn:visited {
-    padding: 0.4rem 0;
-    background-color: transparent;
-    font-size: 2.2rem;
-    letter-spacing: 0.05ch;
-    color: white;
-    font-weight: 300;
-    position: relative;
-  }
-
-  &__btn {
-    &--red {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: $color-menu-red;
-        transition: width 0.3s ease-in-out;
-      }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: $color-menu-red;
-      }
+    &__btn:link,
+    &__btn:visited {
+      padding: 0.4rem 0;
+      background-color: transparent;
+      font-size: 2.2rem;
+      letter-spacing: 0.05ch;
+      color: white;
+      font-weight: 300;
+      position: relative;
     }
 
-    &--orange {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: $color-menu-orange;
-        transition: width 0.3s ease-in-out;
+    &__btn {
+      &--red {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-menu-red;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: $color-menu-red;
+        }
       }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: $color-menu-orange;
-      }
-    }
 
-    &--yellow {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: $color-menu-yellow;
-        transition: width 0.3s ease-in-out;
+      &--orange {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-menu-orange;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: $color-menu-orange;
+        }
       }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: $color-menu-yellow;
-      }
-    }
 
-    &--green {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: $color-menu-green;
-        transition: width 0.3s ease-in-out;
+      &--yellow {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-menu-yellow;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: $color-menu-yellow;
+        }
       }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: $color-menu-green;
-      }
-    }
 
-    &--blue {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: $color-menu-blue;
-        transition: width 0.3s ease-in-out;
+      &--green {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-menu-green;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: $color-menu-green;
+        }
       }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: #86c9ff;
-      }
-    }
 
-    &--purple {
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0%;
-        height: 4.5px;
-        background-color: #9672ff;
-        transition: width 0.3s ease-in-out;
+      &--blue {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-menu-blue;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: #86c9ff;
+        }
       }
-      &:hover::after {
-        width: 100%;
-      }
-      &:active {
-        color: #bfaaff;
+
+      &--purple {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: #9672ff;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: #bfaaff;
+        }
       }
     }
   }

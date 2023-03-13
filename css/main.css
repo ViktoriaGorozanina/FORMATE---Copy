@@ -32,15 +32,6 @@ a {
   text-decoration: none;
 }
 
-a:focus-visible,
-input:focus-visible,
-button:focus-visible {
-  outline: 2px solid #ff922b;
-  padding: 0 1rem;
-  outline-offset: 3px;
-  border-radius: 3px;
-}
-
 .btn {
   outline-color: transparent;
   letter-spacing: 1px;
@@ -78,7 +69,174 @@ button:focus-visible {
   border-color: #63e6ce;
 }
 
+.ham-nav {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1080px) {
+  .blur {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 6rem;
+    left: -90rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    -webkit-backdrop-filter: blur(2.2px);
+            backdrop-filter: blur(2.2px);
+    visibility: hidden;
+  }
+  .ham-nav {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 50px;
+    z-index: 3;
+  }
+  #menuToggle {
+    display: block;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+     -ms-user-select: none;
+         user-select: none;
+  }
+  #menuToggle a:link,
+  #menuToggle a:visited {
+    text-decoration: none;
+    color: #f7faf9;
+    -webkit-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+  }
+  #menuToggle a:hover {
+    color: #faa2c1;
+  }
+  #menuToggle a:active {
+    color: #f06595;
+  }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  /*
+  * Just a quick hamburger
+  */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #f7faf9;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+        -ms-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menuToggle span:first-child {
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  #menuToggle span:nth-last-child(2) {
+    -webkit-transform-origin: 0% 100%;
+        -ms-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+        -ms-transform: rotate(45deg) translate(-2px, -1px);
+            transform: rotate(45deg) translate(-2px, -1px);
+    background: #f7faf9;
+  }
+  /*
+  * But let's hide the middle one.
+  */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+        -ms-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  /*
+  * Ohyeah and the last one should go the other direction
+  */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    -webkit-transform: rotate(-45deg) translate(0, -1px);
+        -ms-transform: rotate(-45deg) translate(0, -1px);
+            transform: rotate(-45deg) translate(0, -1px);
+  }
+  /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+  #menu {
+    z-index: 0;
+    position: absolute;
+    width: 50rem;
+    margin: -100px 0 0 -40rem;
+    padding-right: 10rem;
+    padding-left: 10.3rem;
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+    background: #087f73;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    -webkit-transform-origin: 0% 0%;
+        -ms-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+    -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -o-transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  #menu li {
+    padding: 1.5rem 0;
+    font-size: 2.2rem;
+  }
+  /*
+  * And let's slide it in from the rihgt
+  */
+  #menuToggle input:checked ~ ul {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+  #menuToggle input:checked + div.blur {
+    visibility: visible;
+  }
+}
 .header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +249,7 @@ button:focus-visible {
   background-color: #087f73;
   height: 9rem;
   padding: 0 3.5rem;
+  z-index: 3;
 }
 
 .logo {
@@ -101,6 +260,7 @@ button:focus-visible {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 6;
 }
 .logo__icon {
   height: 5.3rem;
@@ -122,133 +282,138 @@ button:focus-visible {
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-width: 70rem;
-  width: 45%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.nav__btn:link, .nav__btn:visited {
-  padding: 0.4rem 0;
-  background-color: transparent;
-  font-size: 2.2rem;
-  letter-spacing: 0.05ch;
-  color: white;
-  font-weight: 300;
-  position: relative;
-}
-.nav__btn--red::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #ff6b6b;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--red:hover::after {
-  width: 100%;
-}
-.nav__btn--red:active {
-  color: #ff6b6b;
-}
-.nav__btn--orange::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #ff922b;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--orange:hover::after {
-  width: 100%;
-}
-.nav__btn--orange:active {
-  color: #ff922b;
-}
-.nav__btn--yellow::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #fcc419;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--yellow:hover::after {
-  width: 100%;
-}
-.nav__btn--yellow:active {
-  color: #fcc419;
-}
-.nav__btn--green::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #20c997;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--green:hover::after {
-  width: 100%;
-}
-.nav__btn--green:active {
-  color: #20c997;
-}
-.nav__btn--blue::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #339af0;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--blue:hover::after {
-  width: 100%;
-}
-.nav__btn--blue:active {
-  color: #86c9ff;
-}
-.nav__btn--purple::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 4.5px;
-  background-color: #9672ff;
-  -webkit-transition: width 0.3s ease-in-out;
-  -o-transition: width 0.3s ease-in-out;
-  transition: width 0.3s ease-in-out;
-}
-.nav__btn--purple:hover::after {
-  width: 100%;
-}
-.nav__btn--purple:active {
-  color: #bfaaff;
+  display: none;
 }
 
+@media only screen and (min-width: 1080px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 70rem;
+    width: 45%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .nav__btn:link, .nav__btn:visited {
+    padding: 0.4rem 0;
+    background-color: transparent;
+    font-size: 2.2rem;
+    letter-spacing: 0.05ch;
+    color: white;
+    font-weight: 300;
+    position: relative;
+  }
+  .nav__btn--red::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #ff6b6b;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--red:hover::after {
+    width: 100%;
+  }
+  .nav__btn--red:active {
+    color: #ff6b6b;
+  }
+  .nav__btn--orange::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #ff922b;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--orange:hover::after {
+    width: 100%;
+  }
+  .nav__btn--orange:active {
+    color: #ff922b;
+  }
+  .nav__btn--yellow::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #fcc419;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--yellow:hover::after {
+    width: 100%;
+  }
+  .nav__btn--yellow:active {
+    color: #fcc419;
+  }
+  .nav__btn--green::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #20c997;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--green:hover::after {
+    width: 100%;
+  }
+  .nav__btn--green:active {
+    color: #20c997;
+  }
+  .nav__btn--blue::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #339af0;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--blue:hover::after {
+    width: 100%;
+  }
+  .nav__btn--blue:active {
+    color: #86c9ff;
+  }
+  .nav__btn--purple::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #9672ff;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--purple:hover::after {
+    width: 100%;
+  }
+  .nav__btn--purple:active {
+    color: #bfaaff;
+  }
+}
 .access {
   display: grid;
   grid-template-columns: repeat(2, -webkit-max-content);
