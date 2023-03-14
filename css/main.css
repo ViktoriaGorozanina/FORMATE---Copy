@@ -74,12 +74,11 @@ a {
 }
 
 .blur {
-  content: "";
   position: fixed;
-  width: 100vw;
+  width: 250vw;
   height: 100vh;
   top: 6rem;
-  left: -50rem;
+  left: -105rem;
   background-color: rgba(255, 255, 255, 0.2);
   z-index: -1;
   -webkit-backdrop-filter: blur(2.2px);
@@ -90,8 +89,8 @@ a {
 @media only screen and (max-width: 1080px) {
   .ham-nav {
     display: block;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 5rem;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -199,7 +198,7 @@ a {
     z-index: 0;
     position: absolute;
     width: 50rem;
-    margin: -100px 0 0 -40rem;
+    margin: -100px 0 0 -43rem;
     padding-right: 10rem;
     padding-left: 10.3rem;
     padding-top: 14rem;
@@ -232,12 +231,13 @@ a {
         -ms-transform: none;
             transform: none;
   }
-  #menuToggle input:checked > .blur {
+  .checkbox:checked + .blur {
     display: block;
   }
 }
 .header {
-  position: relative;
+  width: 100vw;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -461,6 +461,10 @@ a {
 }
 .access__plan {
   color: inherit;
+}
+
+.main {
+  padding-top: 9rem;
 }
 
 .footer {
