@@ -6,7 +6,7 @@
   align-items: center;
   background-color: $color-primary;
   height: 9rem;
-  padding: 0 3.5rem;
+  padding: 0 5.5rem 0 3.5rem;
   z-index: 3;
 }
 
@@ -51,7 +51,7 @@
   .nav {
     display: flex;
     min-width: 70rem;
-    width: 45%;
+    width: 50%;
     justify-content: space-between;
 
     &__btn:link,
@@ -179,9 +179,28 @@
           color: #bfaaff;
         }
       }
+      &--white {
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 0%;
+          height: 4.5px;
+          background-color: $color-white;
+          transition: width 0.3s ease-in-out;
+        }
+        &:hover::after {
+          width: 100%;
+        }
+        &:active {
+          color: #82f5e0;
+        }
+      }
     }
   }
 }
+
 .access {
   display: grid;
   grid-template-columns: repeat(2, max-content);

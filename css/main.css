@@ -83,7 +83,11 @@ a {
   z-index: -1;
   -webkit-backdrop-filter: blur(2.2px);
           backdrop-filter: blur(2.2px);
-  display: none;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -232,7 +236,8 @@ a {
             transform: none;
   }
   .checkbox:checked + .blur {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
 .header {
@@ -249,7 +254,7 @@ a {
           align-items: center;
   background-color: #087f73;
   height: 9rem;
-  padding: 0 3.5rem;
+  padding: 0 5.5rem 0 3.5rem;
   z-index: 3;
 }
 
@@ -292,7 +297,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     min-width: 70rem;
-    width: 45%;
+    width: 50%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -414,6 +419,24 @@ a {
   .nav__btn--purple:active {
     color: #bfaaff;
   }
+  .nav__btn--white::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 4.5px;
+    background-color: #f7faf9;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+  }
+  .nav__btn--white:hover::after {
+    width: 100%;
+  }
+  .nav__btn--white:active {
+    color: #82f5e0;
+  }
 }
 .access {
   display: grid;
@@ -464,7 +487,7 @@ a {
 }
 
 .main {
-  padding-top: 9rem;
+  padding-top: 7rem;
 }
 
 .footer {

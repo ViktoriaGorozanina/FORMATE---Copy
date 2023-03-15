@@ -12,8 +12,10 @@
   background-color: rgba(255, 255, 255, 0.2);
   z-index: -1;
   backdrop-filter: blur(2.2px);
-  display: none;
-  // visibility: hidden;
+  // display: none;
+  visibility: hidden;
+  transition: all 0.4s;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 1080px) {
@@ -156,7 +158,8 @@
     transform: none;
   }
   .checkbox:checked + .blur {
-    display: block;
-    // visibility: visible;
+    // display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }
