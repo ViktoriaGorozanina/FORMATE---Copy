@@ -1,0 +1,18 @@
+.subscribe__form {
+  margin-left: 10rem;
+
+  &--header {
+    color: $color-primary;
+    font-size: 5.4rem;
+    font-weight: 600;
+  }
+
+  &--text {
+    font-size: 3rem;
+    max-width: 48ch;
+
+    span {
+      color: $color-primary;
+    }
+  }
+}

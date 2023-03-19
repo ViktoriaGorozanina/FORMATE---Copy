@@ -5,7 +5,7 @@
       .cls-1 {
         fill: none;
         fill-rule: evenodd;
-        stroke: #66b4aa;
+        stroke: #20c9b5;
         stroke-linecap: round;
         stroke-miterlimit: 10;
         stroke-width: 1.39px;
