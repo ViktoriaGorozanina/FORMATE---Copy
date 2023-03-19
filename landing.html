@@ -102,9 +102,28 @@
           class="subscribe__form--button"
         />
       </div>
-      <div class="subscribe__image">
-        <img src="/Assets/img/Landing-subscribe.jpg" alt="" />
-      </div>
+      <picture class="subscribe__image">
+        <source
+          srcset="/Assets/img/Landing-subscribe-2800.jpg"
+          alt="Leaf and handmade cream"
+          media="(min-width: 1921px)"
+        />
+        <source
+          srcset="/Assets/img/Landing-subscribe-1920.jpg"
+          alt="Leaf and handmade cream"
+          media="(min-width: 1100px)"
+        />
+        <source
+          srcset="/Assets/img/Landing-subscribe-1100.jpg"
+          alt="Leaf and handmade cream"
+          media="(min-width: 500px)"
+        />
+
+        <img
+          src="/Assets/img/Landing-subscribe-500.jpg"
+          alt="Leaf and handmade cream"
+        />
+      </picture>
     </section>
   </body>
 </html>

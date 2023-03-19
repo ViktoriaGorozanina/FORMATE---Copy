@@ -21,7 +21,6 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: rgb(247, 247, 247);
 }
 
 ul {
@@ -70,7 +69,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 2rem;
-  margin-top: -12rem;
+  margin-top: -2rem;
 }
 .subscribe__form--header {
   color: #087f73;
@@ -348,7 +347,7 @@ a {
           align-items: center;
   background-color: #087f73;
   height: 9rem;
-  padding: 0 5.5rem 0 3.5rem;
+  padding: 0 6rem 0 3.5rem;
   z-index: 3;
 }
 
@@ -749,6 +748,7 @@ a {
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 7rem;
+  letter-spacing: 0.08ch;
 }
 .intro-presentation__btn:link, .intro-presentation__btn:visited {
   padding: 0.8rem 4rem;
@@ -791,18 +791,24 @@ a {
           align-items: center;
 }
 .subscribe__background {
+  align-self: start;
+  justify-self: start;
   background-color: white;
   grid-column: 1/span 2;
   grid-row: 1;
   z-index: -51;
-  height: 99%;
+  height: 99.6%;
   width: 100vw;
 }
 .subscribe__form {
   grid-column: 1;
   grid-row: 1;
 }
+.subscribe picture > * {
+  max-width: 100%;
+}
 .subscribe__image {
+  align-self: start;
   grid-column: 1/-1;
   grid-row: 1;
   z-index: -50;
@@ -827,6 +833,10 @@ a {
 }
 .news__figure--1 {
   background-image: url(/Assets/img/intro-bg-green.jpg);
+}
+
+.home-page {
+  background-color: rgb(247, 247, 247);
 }
 
 .main-news {
