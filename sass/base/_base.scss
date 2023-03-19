@@ -12,6 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: rgb(247, 247, 247);
 }
 
 ul {
@@ -25,7 +26,7 @@ a {
 // a:focus-visible,
 // input:focus-visible,
 // button:focus-visible {
-//   outline: 2px solid $color-menu-orange;
+//   outline: 2px solid $color-primary;
 //   padding: 0 1rem;
 //   outline-offset: 3px;
 //   border-radius: 3px;
