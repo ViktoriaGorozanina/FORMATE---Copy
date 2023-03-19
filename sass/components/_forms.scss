@@ -1,5 +1,11 @@
 .subscribe__form {
   margin-left: 10rem;
+  background-color: white;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: -12rem;
 
   &--header {
     color: $color-primary;
@@ -9,10 +15,83 @@
 
   &--text {
     font-size: 3rem;
+    font-weight: 400;
     max-width: 48ch;
+    color: $color-grey-dark-3;
 
     span {
       color: $color-primary;
     }
+  }
+
+  //! --------ERROR MESSAGE --------
+
+  &--email-error-message,
+  &--name-error-message {
+    color: red;
+    font-size: 1.8rem;
+    font-weight: 300;
+    display: none;
+    margin-top: -1rem;
+    display: none;
+    margin-left: 1rem;
+  }
+  input[type="email"]:invalid + .subscribe__form--email-error-message {
+    display: block;
+  }
+  input[type="text"]:invalid + .subscribe__form--name-error-message {
+    display: block;
+  }
+
+  &--name,
+  &--email {
+    background-color: #eff2f8;
+    border-style: none;
+    padding: 1rem 3rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    font-family: inherit;
+    border-radius: 6px;
+    &:focus {
+      outline-color: $color-primary;
+    }
+    &::-webkit-placeholder {
+      color: rgb(178, 178, 178);
+    }
+    &::-moz-placeholder {
+      color: rgb(178, 178, 178);
+    }
+    &::-ms-placeholder {
+      color: rgb(178, 178, 178);
+    }
+    &::placeholder {
+      color: rgb(178, 178, 178);
+    }
+  }
+
+  &--button {
+    background-color: $color-primary;
+    border-style: none;
+    padding: 1rem 12rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    font-family: inherit;
+    width: min-content;
+    color: $color-white;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-primary-dark-1;
+    }
+    &:active {
+      background-color: $color-primary-dark-2;
+    }
+  }
+
+  &--terms {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $color-grey-dark-3;
   }
 }

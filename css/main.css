@@ -60,6 +60,17 @@ a {
 }
 .subscribe__form {
   margin-left: 10rem;
+  background-color: white;
+  padding: 3rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-top: -12rem;
 }
 .subscribe__form--header {
   color: #087f73;
@@ -68,10 +79,88 @@ a {
 }
 .subscribe__form--text {
   font-size: 3rem;
+  font-weight: 400;
   max-width: 48ch;
+  color: #2d373a;
 }
 .subscribe__form--text span {
   color: #087f73;
+}
+.subscribe__form--email-error-message, .subscribe__form--name-error-message {
+  color: red;
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: none;
+  margin-top: -1rem;
+  display: none;
+  margin-left: 1rem;
+}
+.subscribe__form input[type=email]:invalid + .subscribe__form--email-error-message {
+  display: block;
+}
+.subscribe__form input[type=text]:invalid + .subscribe__form--name-error-message {
+  display: block;
+}
+.subscribe__form--name, .subscribe__form--email {
+  background-color: #eff2f8;
+  border-style: none;
+  padding: 1rem 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+  font-family: inherit;
+  border-radius: 6px;
+}
+.subscribe__form--name:focus, .subscribe__form--email:focus {
+  outline-color: #087f73;
+}
+.subscribe__form--name::-webkit-placeholder, .subscribe__form--email::-webkit-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::-moz-placeholder, .subscribe__form--email::-moz-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::-ms-placeholder, .subscribe__form--email::-ms-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::-webkit-input-placeholder, .subscribe__form--email::-webkit-input-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::-moz-placeholder, .subscribe__form--email::-moz-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name:-ms-input-placeholder, .subscribe__form--email:-ms-input-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::-ms-input-placeholder, .subscribe__form--email::-ms-input-placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--name::placeholder, .subscribe__form--email::placeholder {
+  color: rgb(178, 178, 178);
+}
+.subscribe__form--button {
+  background-color: #087f73;
+  border-style: none;
+  padding: 1rem 12rem;
+  font-size: 2.8rem;
+  font-weight: 300;
+  font-family: inherit;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  color: #f7faf9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.subscribe__form--button:hover {
+  background-color: #006256;
+}
+.subscribe__form--button:active {
+  background-color: #004139;
+}
+.subscribe__form--terms {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #2d373a;
 }
 
 .ham-nav {

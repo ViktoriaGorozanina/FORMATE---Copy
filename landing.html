@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;1,200&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,200&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
 
@@ -72,14 +72,22 @@
           class="subscribe__form--name"
           id="subscribe__name"
           placeholder="Name"
+          required
         />
+        <span class="subscribe__form--name-error-message"
+          >Hey, you forgot something.</span
+        >
 
         <input
           type="email"
           class="subscribe__form--email"
-          id="subscribe__name"
+          id="subscribe__email"
           placeholder="E-mail"
+          required
         />
+        <span class="subscribe__form--email-error-message"
+          >Email format is invalid.</span
+        >
 
         <p class="subscribe__form--terms">
           By submitting your email address, you consent to receive marketing
@@ -87,7 +95,12 @@
           in compliance with GDPR regulations.
         </p>
 
-        <button class="subscribe__form--button">Subscribe</button>
+        <!-- <button class="subscribe__form--button">Subscribe</button> -->
+        <input
+          type="submit"
+          value="Subscribe"
+          class="subscribe__form--button"
+        />
       </div>
       <div class="subscribe__image">
         <img src="/Assets/img/Landing-subscribe.jpg" alt="" />
