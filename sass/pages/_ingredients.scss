@@ -1,0 +1,13 @@
+.ingredients {
+  flex: 1fr 5fr;
+
+  &__sidebar {
+    justify-self: start;
+    a:hover {
+      color: $color-menu-blue;
+    }
+    a:active {
+      color: $color-grey-dark-2;
+    }
+  }
+}
