@@ -350,7 +350,6 @@ a {
           flex-direction: column;
   background-color: white;
   position: relative;
-  overflow: hidden;
 }
 
 .header {
@@ -924,16 +923,17 @@ a {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 7px;
-  width: 45rem;
-  height: 50rem;
+  width: 58rem;
+  height: 75rem;
   background-color: white;
   position: relative;
+  overflow: visible;
 }
 .center .hero__card::before {
   content: "This month hero";
   position: absolute;
   top: 3rem;
-  left: 0;
+  left: -1rem;
   background: #339af0;
   padding: 0.5rem 2rem;
   color: white;
@@ -952,8 +952,10 @@ a {
 }
 .center .hero__card figure {
   position: relative;
-  height: 60%;
+  border-radius: 7px 7px 0 0;
+  height: 53%;
   width: 100%;
+  overflow: hidden;
 }
 .center .hero__card .figcaption {
   position: absolute;
@@ -988,18 +990,45 @@ a {
   font-size: 1.8rem;
   letter-spacing: 0.1ch;
 }
+.center .hero__card--details {
+  padding: 48px 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 48px;
+}
+.center .hero__card--details p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.center .hero__card--details a {
+  font-size: 1.8rem;
+  color: white;
+  border-radius: 5px;
+  background-color: #339af0;
+  padding: 1.2rem 2.8rem;
+  letter-spacing: 0.07ch;
+}
 .center .hero__card--use ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 .center .hero__card--use ul li {
-  color: white;
-  background-color: #339af0;
-  padding: 2px 12px;
-  border-radius: 50px;
-  font-size: 1.2rem;
+  color: #2d373a;
+  background-color: #ebeeef;
+  padding: 2px 18px;
+  border-radius: 5px;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 .center .hero__library {
   display: grid;
@@ -1020,14 +1049,62 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 4rem;
+  gap: 3.2rem;
   padding-left: 4rem;
-  border-left: solid 1px #708990;
+}
+.new-ingredients--title {
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
 }
 .new-ingredients__card {
-  background-color: burlywood;
-  width: 20rem;
-  height: 20rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: auto;
+  height: auto;
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #708990;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.new-ingredients__card:hover {
+  -webkit-transform: translateY(-1.5px);
+      -ms-transform: translateY(-1.5px);
+          transform: translateY(-1.5px);
+  -webkit-box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.1);
+}
+.new-ingredients__card:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.new-ingredients__card--name {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.new-ingredients__card--type {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.new-ingredients__card--date {
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .hype__figure--3 {
@@ -1202,7 +1279,7 @@ a {
   padding: 0.1rem 3rem;
   background-color: #f06595;
   top: 2rem;
-  right: 0;
+  right: 1rem;
   -webkit-transform: translateX(20%);
       -ms-transform: translateX(20%);
           transform: translateX(20%);

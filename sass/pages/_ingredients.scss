@@ -26,16 +26,17 @@
       align-self: center;
       border-radius: 7px;
 
-      width: 45rem;
-      height: 50rem;
+      width: 58rem;
+      height: 75rem;
       background-color: white;
       position: relative;
+      overflow: visible;
 
       &::before {
         content: "This month hero";
         position: absolute;
         top: 3rem;
-        left: 0;
+        left: -1rem;
         background: $color-menu-blue;
         padding: 0.5rem 2rem;
         color: white;
@@ -61,8 +62,10 @@
 
       figure {
         position: relative;
-        height: 60%;
+        border-radius: 7px 7px 0 0;
+        height: 53%;
         width: 100%;
+        overflow: hidden;
       }
 
       .figcaption {
@@ -91,17 +94,37 @@
           letter-spacing: 0.1ch;
         }
       }
+      &--details {
+        padding: 48px 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        p {
+          text-align: center;
+          font-size: 1.6rem;
+        }
 
+        a {
+          font-size: 1.8rem;
+          color: white;
+          border-radius: 5px;
+          background-color: $color-menu-blue;
+          padding: 1.2rem 2.8rem;
+          letter-spacing: 0.07ch;
+        }
+      }
       &--use {
         ul {
           display: flex;
-          gap: 10px;
+          gap: 12px;
           li {
-            color: white;
-            background-color: $color-menu-blue;
-            padding: 2px 12px;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            color: $color-grey-dark-3;
+            background-color: $color-grey-light-3;
+            padding: 2px 18px;
+            border-radius: 5px;
+            font-size: 1.6rem;
+            font-weight: 300;
           }
         }
       }
@@ -126,12 +149,47 @@
 .new-ingredients {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.2rem;
   padding-left: 4rem;
-  border-left: solid 1px $color-grey-dark-2;
+  // border-left: solid 1px $color-grey-dark-2;
+  &--title {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+  }
   &__card {
-    background-color: burlywood;
-    width: 20rem;
-    height: 20rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: auto;
+    height: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // gap: 0.2rem;
+    color: $color-grey-dark-2;
+    transition: all 0.1s;
+    &:hover {
+      transform: translateY(-1.5px);
+      box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.1);
+    }
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    &--name {
+      font-size: 2.2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    &--type {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+    &--date {
+      font-style: italic;
+      font-size: 1.2rem;
+    }
   }
 }
