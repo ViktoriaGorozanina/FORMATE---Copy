@@ -20,12 +20,94 @@
   .hero {
     display: flex;
     flex-direction: column;
+
     &__card {
       margin-bottom: 8rem;
       align-self: center;
-      background-color: lemonchiffon;
-      width: 50rem;
+      border-radius: 7px;
+
+      width: 45rem;
       height: 50rem;
+      background-color: white;
+      position: relative;
+
+      &::before {
+        content: "This month hero";
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        background: $color-menu-blue;
+        padding: 0.5rem 2rem;
+        color: white;
+        text-transform: lowercase;
+        font-size: 1.4rem;
+
+        z-index: 1;
+      }
+
+      &--img {
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5) 35%,
+            rgba(0, 0, 0, 0) 60%
+          ),
+          url(/Assets/img/Lavender.jpg);
+
+        background-size: cover;
+        background-position: center;
+      }
+
+      figure {
+        position: relative;
+        height: 60%;
+        width: 100%;
+      }
+
+      .figcaption {
+        position: absolute;
+        color: white;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+
+        figcaption {
+          align-self: center;
+          display: block;
+        }
+        figcaption:first-child {
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 5rem;
+          margin-bottom: -1rem;
+          letter-spacing: 0.15ch;
+        }
+        figcaption:last-child {
+          text-transform: lowercase;
+          font-size: 1.8rem;
+          letter-spacing: 0.1ch;
+        }
+      }
+
+      &--use {
+        ul {
+          display: flex;
+          gap: 10px;
+          li {
+            color: white;
+            background-color: $color-menu-blue;
+            padding: 2px 12px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    &__btn {
     }
 
     &__library {

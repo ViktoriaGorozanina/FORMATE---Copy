@@ -334,6 +334,25 @@ a {
     opacity: 1;
   }
 }
+.card {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
 .header {
   width: 100vw;
   position: fixed;
@@ -611,7 +630,7 @@ a {
   padding-left: 2rem;
   padding-right: 2rem;
   margin: 0 auto;
-  margin-top: 16rem;
+  margin-top: 18rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,9 +923,83 @@ a {
   margin-bottom: 8rem;
   -ms-flex-item-align: center;
       align-self: center;
-  background-color: lemonchiffon;
-  width: 50rem;
+  border-radius: 7px;
+  width: 45rem;
   height: 50rem;
+  background-color: white;
+  position: relative;
+}
+.center .hero__card::before {
+  content: "This month hero";
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  background: #339af0;
+  padding: 0.5rem 2rem;
+  color: white;
+  text-transform: lowercase;
+  font-size: 1.4rem;
+  z-index: 1;
+}
+.center .hero__card--img {
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(35%, rgba(0, 0, 0, 0.5)), color-stop(60%, rgba(0, 0, 0, 0))), url(/Assets/img/Lavender.jpg);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 60%), url(/Assets/img/Lavender.jpg);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0) 60%), url(/Assets/img/Lavender.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.center .hero__card figure {
+  position: relative;
+  height: 60%;
+  width: 100%;
+}
+.center .hero__card .figcaption {
+  position: absolute;
+  color: white;
+  bottom: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.center .hero__card .figcaption figcaption {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: block;
+}
+.center .hero__card .figcaption figcaption:first-child {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 5rem;
+  margin-bottom: -1rem;
+  letter-spacing: 0.15ch;
+}
+.center .hero__card .figcaption figcaption:last-child {
+  text-transform: lowercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1ch;
+}
+.center .hero__card--use ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.center .hero__card--use ul li {
+  color: white;
+  background-color: #339af0;
+  padding: 2px 12px;
+  border-radius: 50px;
+  font-size: 1.2rem;
 }
 .center .hero__library {
   display: grid;
