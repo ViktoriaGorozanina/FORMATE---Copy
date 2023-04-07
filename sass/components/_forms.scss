@@ -1,26 +1,27 @@
 .subscribe__form {
   margin-left: 10rem;
   background-color: white;
-  padding: 3rem 1rem;
+  padding: 5rem 1rem 4rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: -2rem;
+  border-radius: 7px;
 
   &--header {
     color: $color-primary;
-    font-size: 5.4rem;
+    font-size: clamp(4rem, 1.8vw + 2rem, 6rem);
     font-weight: 600;
   }
 
   &--text {
-    font-size: 3rem;
+    font-size: clamp(2rem, 0.8vw + 1.5rem, 4rem);
     font-weight: 400;
     max-width: 48ch;
     color: $color-grey-dark-3;
 
     span {
       color: $color-primary;
+      // font-size: clamp(1rem, 1vw + 2rem, 5rem);
     }
   }
 
@@ -29,7 +30,7 @@
   &--email-error-message,
   &--name-error-message {
     color: red;
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 0.5vw + 0.6rem, 1.8rem);
     font-weight: 300;
     display: none;
     margin-top: -1rem;
@@ -48,7 +49,7 @@
     background-color: #eff2f8;
     border-style: none;
     padding: 1rem 3rem;
-    font-size: 2.5rem;
+    font-size: clamp(0.5rem, 0.8vw + 1rem, 2rem);
     font-weight: 300;
     font-family: inherit;
     border-radius: 6px;
@@ -73,7 +74,7 @@
     background-color: $color-primary;
     border-style: none;
     padding: 1rem 12rem;
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 0.8vw + 1.5rem, 4rem);
     font-weight: 300;
     font-family: inherit;
     width: min-content;
@@ -90,7 +91,7 @@
   }
 
   &--terms {
-    font-size: 1.8rem;
+    font-size: clamp(1rem, 0.7vw + 1rem, 1.8rem);
     font-weight: 300;
     color: $color-grey-dark-3;
   }
