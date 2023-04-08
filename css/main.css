@@ -757,15 +757,20 @@ a {
 .intro {
   background-image: url(/Assets/img/intro-bg-green.jpg);
   background-size: cover;
-  height: 98vh;
+  min-height: 98vh;
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
 }
 
 .container {
   height: 100%;
-  padding: 0 8rem 2rem 8rem;
-  gap: 6rem;
+  padding: 0 8rem 4rem 8rem;
+  gap: 22vh;
   display: grid;
   grid-template-rows: minmax(9rem, 12%) 1fr;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   color: #fbfffe;
 }
 
@@ -801,6 +806,7 @@ a {
 .intro-presentation {
   -ms-flex-item-align: center;
       align-self: center;
+  padding-bottom: 3rem;
 }
 .intro-presentation__headline {
   text-transform: uppercase;
@@ -834,9 +840,8 @@ a {
   background-color: rgba(251, 255, 254, 0.7);
 }
 .intro-presentation__arrow {
-  position: absolute;
-  bottom: 3rem;
   justify-self: center;
+  margin-bottom: -2rem;
 }
 .intro-presentation__arrow--icon {
   height: 1rem;
@@ -869,7 +874,7 @@ a {
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
-  min-width: 50rem;
+  min-width: 48rem;
   max-width: 90rem;
 }
 .subscribe picture > * {
