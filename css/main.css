@@ -59,9 +59,8 @@ a {
   font-size: 2rem;
 }
 .subscribe__form {
-  margin-left: 10rem;
   background-color: white;
-  padding: 5rem 1rem 4rem 1rem;
+  padding: 5rem 4rem 4rem 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,7 +87,7 @@ a {
 }
 .subscribe__form--email-error-message, .subscribe__form--name-error-message {
   color: red;
-  font-size: clamp(1.3rem, 0.5vw + 0.6rem, 1.8rem);
+  font-size: clamp(1.5rem, 0.8vw + 0.4rem, 1.8rem);
   font-weight: 300;
   display: none;
   margin-top: -1rem;
@@ -764,7 +763,7 @@ a {
 .container {
   height: 100%;
   padding: 0 8rem 2rem 8rem;
-  gap: 7rem;
+  gap: 6rem;
   display: grid;
   grid-template-rows: minmax(9rem, 12%) 1fr;
   color: #fbfffe;
@@ -806,14 +805,14 @@ a {
 .intro-presentation__headline {
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 4.8rem;
+  font-size: clamp(3.2rem, 2vw + 1rem, 8rem);
   margin-bottom: 5rem;
   line-height: 1.2;
   letter-spacing: 1.6px;
 }
 .intro-presentation__text {
   max-width: 48ch;
-  font-size: 2.9rem;
+  font-size: clamp(2rem, 1.2vw + 0.5rem, 6rem);
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 7rem;
@@ -824,7 +823,7 @@ a {
   border: solid 3px #fbfffe;
   color: #fbfffe;
   border-radius: 100px;
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 1vw + 0.4rem, 8rem);
   font-weight: 600;
 }
 .intro-presentation__btn:hover {
@@ -835,6 +834,8 @@ a {
   background-color: rgba(251, 255, 254, 0.7);
 }
 .intro-presentation__arrow {
+  position: absolute;
+  bottom: 3rem;
   justify-self: center;
 }
 .intro-presentation__arrow--icon {
@@ -856,23 +857,20 @@ a {
 }
 .subscribe__background {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: white;
-  z-index: -52;
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: 100vw;
+  z-index: -2;
 }
 .subscribe__form {
+  justify-self: center;
   grid-column: 1;
   grid-row: 1;
   z-index: 2;
   min-width: 50rem;
-  padding-right: 3rem;
+  max-width: 90rem;
 }
 .subscribe picture > * {
   height: 100%;

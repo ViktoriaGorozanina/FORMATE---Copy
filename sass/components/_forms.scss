@@ -1,7 +1,7 @@
 .subscribe__form {
-  margin-left: 10rem;
+  // margin-left: 1rem;
   background-color: white;
-  padding: 5rem 1rem 4rem 1rem;
+  padding: 5rem 4rem 4rem 5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -30,7 +30,7 @@
   &--email-error-message,
   &--name-error-message {
     color: red;
-    font-size: clamp(1.3rem, 0.5vw + 0.6rem, 1.8rem);
+    font-size: clamp(1.5rem, 0.8vw + 0.4rem, 1.8rem);
     font-weight: 300;
     display: none;
     margin-top: -1rem;
