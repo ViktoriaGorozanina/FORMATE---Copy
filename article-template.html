@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      class="favicon"
+      rel="shortcut icon"
+      type="image/svg"
+      href="/Assets/img/LogoNobubble.svg"
+    />
+
+    <title>News &vert; Formate</title>
+  </head>
+
+  <body>
+    <div class="page">
+      <section class="header">
+        <nav role="navigation" class="ham-nav">
+          <div id="menuToggle">
+            <!-- A fake / hidden checkbox is used as click reciever, so you can use the :checked selector on it. -->
+            <input type="checkbox" class="checkbox" />
+            <div class="blur">&nbsp;</div>
+            <!-- Some spans to act as a hamburger. They are acting like a real hamburger, not that McDonalds stuff. -->
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- Too bad the menu has to be inside of the button but hey, it's pure CSS magic. -->
+            <ul id="menu">
+              <li><a href="/index.html">News</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Glossary</a></li>
+              <li><a href="#">Ingredients</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <a href="#" class="logo">
+          <img
+            src="/Assets/img/Logo-white.svg"
+            alt="Formate logo icon"
+            class="logo__icon"
+          />
+          <div class="logo__text">
+            <h1 class="logo__text-formate">Formate</h1>
+            <h2 class="logo__text-sub">Your formulating mate</h2>
+          </div>
+        </a>
+
+        <div class="nav">
+          <a href="#" class="nav__btn nav__btn--red">News</a>
+          <a href="#" class="nav__btn nav__btn--orange">Articles</a>
+          <a href="#" class="nav__btn nav__btn--yellow">Tools</a>
+          <a href="#" class="nav__btn nav__btn--green">Glossary</a>
+          <a href="#" class="nav__btn nav__btn--blue">Ingredients</a>
+          <a href="#" class="nav__btn nav__btn--purple">Resources</a>
+          <a href="#" class="nav__btn nav__btn--white">Contact</a>
+        </div>
+        <!-- ACCESS buttons to unmute -->
+        <!-- <div class="access">
+          <a href="#" class="access__login">Log in</a>
+          <a href="#" class="access__plan">Premium plan</a> -->
+      </section>
+
+      <section class="main main-article">
+        <!-- ARTCLE SECTION -->
+        <div class="article">
+          <div class="article__img">&nbsp;</div>
+          <div class="article__head">
+            <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+            <time datetime="2022-10-8" class="date article__date"
+              >October 8th, 2022</time
+            >
+            <span>Author: Some name</span>
+          </div>
+          <div class="article__text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+              dicta deleniti illo facilis iusto, natus doloremque at tenetur.
+              Natus eius laboriosam recusandae molestias est quia adipisci quos,
+              quidem consequuntur doloribus nobis placeat dolor laudantium,
+              inventore modi saepe asperiores dolore? Veniam pariatur eius
+              laboriosam eaque fuga quia temporibus. Reprehenderit, hic.
+              Voluptate?
+            </p>
+            <h3>New subject</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+              tempore blanditiis optio vitae aut cupiditate molestias maxime
+              accusantium, laborum quod debitis recusandae earum voluptatibus
+              fuga ea ex quasi iste. Dicta earum eius repellendus, dignissimos
+              dolores eaque molestias temporibus hic ducimus labore dolorum sunt
+              sint ad pariatur unde! Rerum iusto voluptas saepe animi. Neque
+              repellat minima eligendi dignissimos possimus beatae labore nihil
+              aut, quisquam optio esse ex atque itaque rerum a quaerat
+              repudiandae quia! Laudantium velit nam veniam dolor laboriosam
+              eveniet quae, quaerat vero voluptas vel temporibus aliquam harum
+              perferendis minus animi iste quisquam aut delectus sed! At
+              laboriosam tenetur vitae mollitia cum id possimus error nam,
+              magnam, dolorem soluta. Laboriosam nostrum eveniet eum. Tenetur,
+              debitis odit! Iure labore consequatur voluptates suscipit ex
+              officia temporibus delectus cupiditate, eligendi nihil
+              repudiandae.
+            </p>
+            <h3>New subject</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium natus asperiores rem magnam vel tenetur error, in
+              eveniet voluptatem recusandae deleniti iste aspernatur porro
+              fugiat nulla minima provident, reprehenderit dolorem beatae nihil
+              similique! Corrupti libero at corporis similique maiores laborum,
+              tempore voluptatem, vero eum architecto deleniti quo. Sapiente,
+              facere quia!
+            </p>
+          </div>
+
+          <a href="#">Source</a>
+        </div>
+
+        <!-- SIMILAR POSTS - CARD -->
+        <div class="similar-articles">
+          <h3>Similar articles:</h3>
+          <a href="#">
+            <div class="card similar-articles__card">
+              <h2>First similar post</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                illum.
+              </p>
+            </div>
+
+            <div class="card similar-articles__card">
+              <h2>First similar post</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                illum.
+              </p>
+            </div>
+
+            <div class="card similar-articles__card">
+              <h2>First similar post</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                illum.
+              </p>
+            </div>
+            <div class="card similar-articles__card">
+              <h2>First similar post</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                illum.
+              </p>
+            </div>
+
+            <div class="card similar-articles__card">
+              <h2>First similar post</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                illum.
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer">
+        <div class="footer__div">
+          <div class="footer__header">
+            <img
+              src="/Assets/img/Logo bubble-formate white.svg"
+              alt="Formate Logo"
+              class="footer__logo"
+            />
+            <div class="footer__social">Social media icons</div>
+          </div>
+
+          <div class="footer__body">
+            <ul class="footer__body--about">
+              <li><span>Access</span></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Glossary</a></li>
+            </ul>
+
+            <ul class="footer__body--contact">
+              <li><span>Contact</span></li>
+              <li>formulatingmate@gmail.com</li>
+              <li><a href="#">Form</a></li>
+              <li><a href="#">Subscribe for our newsletter</a></li>
+            </ul>
+
+            <ul class="footer__body--partners">
+              <li><span>For partners</span></li>
+              <li><a href="#">Shops</a></li>
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Communities</a></li>
+              <li><a href="#">Websites</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__bottom">
+            <span class="footer__bottom--trademark">
+              2023 by Formate. All rights reserved.
+            </span>
+            <div class="footer__privacy">
+              <a href="#" class="footer__privacy--policy">Privacy policy</a>
+              <a href="#" class="footer__privacy--cookies">Cookies</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

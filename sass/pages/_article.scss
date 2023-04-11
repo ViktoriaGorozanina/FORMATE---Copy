@@ -1,0 +1,89 @@
+.main-article {
+  //   background-color: yellow;
+  display: grid;
+  grid-template-columns: auto max-content;
+  font-size: clamp(1.8rem, 0.8vw + 0.3rem, 2.2rem);
+}
+.article {
+  //   background-color: pink;
+  & > *:not(last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &__img {
+    background-image: url(/Assets/img/Lavender.jpg);
+    height: 26rem;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px $color-black;
+
+    h1 {
+      margin-bottom: 0.6rem;
+    }
+    time {
+      margin-bottom: 0.8rem;
+      font-size: clamp(1.4rem, 0.7vw + 0.3rem, 1.8rem);
+    }
+    span {
+      font-weight: 300;
+      font-size: clamp(1.4rem, 0.7vw + 0.3rem, 1.8rem);
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &__text {
+    column-count: 3;
+    column-gap: 3.2rem;
+    border-bottom: solid 1px $color-black;
+    padding-bottom: 2.4rem;
+    min-width: 60ch;
+
+    @media screen and (max-width: 1200px) {
+      column-count: 2;
+    }
+
+    & p {
+      margin-bottom: 2.4rem;
+      font-size: clamp(1.6rem, 0.8vw + 0.3rem, 2.2rem);
+    }
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.similar-articles {
+  //   background-color: lightblue;
+  padding-right: 2rem;
+  padding-left: 2.4rem;
+
+  h3 {
+    margin: 2rem 0;
+    font-weight: 400;
+    padding-left: 2.6rem;
+  }
+
+  &__card {
+    max-width: 25ch;
+    padding: 3rem;
+    color: $color-grey-dark-3;
+    margin-bottom: 3rem;
+
+    h2 {
+      margin-bottom: 0.8rem;
+      font-size: clamp(1.6rem, 1.2vw + 0.5rem, 2.2rem);
+    }
+    p {
+      font-size: clamp(1.6rem, 0.8vw + 0.4rem, 1.2rem);
+      font-style: italic;
+      font-weight: 400;
+    }
+  }
+}
