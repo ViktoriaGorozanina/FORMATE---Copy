@@ -82,6 +82,28 @@ a {
   border-radius: 100px;
   font-size: 2rem;
 }
+.btn-print {
+  color: #adbbbf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn-print .material-symbols-outlined {
+  font-size: 2.4rem;
+}
+.btn-print:hover {
+  color: #2d373a;
+}
+
 .subscribe__form {
   background-color: white;
   padding: 5rem 4rem 4rem 5rem;
@@ -359,8 +381,8 @@ a {
 }
 .card {
   border-radius: 5px;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -373,7 +395,6 @@ a {
           flex-direction: column;
   background-color: white;
   position: relative;
-  padding: 3rem;
   -webkit-transition: all 0.12s ease-in-out;
   -o-transition: all 0.12s ease-in-out;
   transition: all 0.12s ease-in-out;
@@ -382,15 +403,15 @@ a {
   -webkit-transform: translateY(-1.5px);
       -ms-transform: translateY(-1.5px);
           transform: translateY(-1.5px);
-  -webkit-box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 6.5px 10px rgba(0, 0, 0, 0.07);
 }
 .card:active {
   -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
           transform: translateY(1px);
-  -webkit-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 4px 3px rgba(0, 0, 0, 0.07);
 }
 
 .header {
@@ -705,6 +726,7 @@ a {
   color: #f7faf9;
 }
 .footer__div {
+  padding: 0 2rem;
   margin: 0 auto;
   height: 100%;
   max-width: 130rem;
@@ -741,8 +763,11 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 0.8vw + 0.3rem, 2.2rem);
   font-weight: 200;
   letter-spacing: 0.07ch;
 }
@@ -811,8 +836,15 @@ a {
   padding-right: 0;
 }
 
+.article {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+  background-color: white;
+  border-radius: 8px;
+  padding: 4rem;
+}
 .article > *:not(last-child) {
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
 }
 .article__img {
   background-image: url(/Assets/img/Lavender.jpg);
@@ -831,6 +863,7 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
   border-bottom: solid 1px #001a17;
+  position: relative;
 }
 .article__head h1 {
   margin-bottom: 0.6rem;
@@ -843,6 +876,11 @@ a {
   font-weight: 300;
   font-size: clamp(1.4rem, 0.7vw + 0.3rem, 1.8rem);
   margin-bottom: 2.2rem;
+}
+.article__head .btn-print {
+  position: absolute;
+  bottom: 0;
+  right: 0.2rem;
 }
 .article__text {
   -webkit-column-count: 3;
@@ -878,19 +916,16 @@ a {
 }
 
 .similar-articles {
-  padding-right: 2rem;
-  padding-left: 2.4rem;
+  padding-left: 4.6rem;
 }
 .similar-articles h3 {
-  margin: 2rem 0;
+  margin: 1rem 0 4rem 0;
   font-weight: 400;
-  padding-left: 2.6rem;
 }
 .similar-articles__card {
-  max-width: 25ch;
-  padding: 3rem;
+  max-width: 22ch;
   color: #2d373a;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 .similar-articles__card h2 {
   margin-bottom: 0.8rem;

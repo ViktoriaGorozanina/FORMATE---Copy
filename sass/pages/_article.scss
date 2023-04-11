@@ -6,9 +6,14 @@
   padding-right: 0;
 }
 .article {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+  background-color: white;
+
+  border-radius: 8px;
+  padding: 4rem;
   //   background-color: pink;
   & > *:not(last-child) {
-    margin-bottom: 2.4rem;
+    margin-bottom: 4rem;
   }
 
   &__img {
@@ -24,6 +29,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: solid 1px $color-black;
+    position: relative;
 
     h1 {
       margin-bottom: 0.6rem;
@@ -36,6 +42,12 @@
       font-weight: 300;
       font-size: clamp(1.4rem, 0.7vw + 0.3rem, 1.8rem);
       margin-bottom: 2.2rem;
+    }
+
+    .btn-print {
+      position: absolute;
+      bottom: 0;
+      right: 0.2rem;
     }
   }
 
@@ -64,21 +76,21 @@
 }
 
 .similar-articles {
-  //   background-color: lightblue;
-  padding-right: 2rem;
-  padding-left: 2.4rem;
+  // background-color: lightblue;
+  // padding-right: 2rem;
+  padding-left: 4.6rem;
 
   h3 {
-    margin: 2rem 0;
+    margin: 1rem 0 4rem 0;
     font-weight: 400;
-    padding-left: 2.6rem;
+    // padding-left: 2.6rem;
   }
 
   &__card {
-    max-width: 25ch;
-    padding: 3rem;
+    max-width: 22ch;
+    // padding: 1.4rem;
     color: $color-grey-dark-3;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     h2 {
       margin-bottom: 0.8rem;

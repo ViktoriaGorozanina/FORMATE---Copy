@@ -47,3 +47,21 @@
     // border-color: $color-primary-light-3;
   }
 }
+
+.btn-print {
+  color: $color-grey-light-1;
+  display: flex;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  .material-symbols-outlined {
+    font-size: 2.4rem;
+  }
+  &:hover {
+    color: $color-grey-dark-3;
+  }
+}
