@@ -25,9 +25,11 @@
       margin-bottom: 8rem;
       align-self: center;
       border-radius: 7px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
 
-      width: 58rem;
-      height: 75rem;
+      max-width: 65%;
+      min-width: 30ch;
+      height: max-content;
       background-color: white;
       position: relative;
       overflow: visible;
@@ -63,7 +65,7 @@
       figure {
         position: relative;
         border-radius: 7px 7px 0 0;
-        height: 53%;
+        height: 40vh;
         width: 100%;
         overflow: hidden;
       }
@@ -84,7 +86,8 @@
         figcaption:first-child {
           text-transform: uppercase;
           font-weight: 500;
-          font-size: 5rem;
+          font-size: clamp(4rem, 2.5vw + 0.9rem, 6rem);
+
           margin-bottom: -1rem;
           letter-spacing: 0.15ch;
         }
@@ -102,7 +105,7 @@
         gap: 48px;
         p {
           text-align: center;
-          font-size: 1.6rem;
+          font-size: clamp(1.6rem, 0.8vw + 0.2rem, 2.2rem);
         }
 
         a {
@@ -162,8 +165,8 @@
     // background-color: white;
     // width: auto;
     // height: auto;
-    // padding: 2rem 4rem;
-    // display: flex;
+    padding: 2rem 4rem;
+    display: flex;
     justify-content: center;
     align-items: center;
     // gap: 0.2rem;

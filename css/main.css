@@ -82,7 +82,8 @@ a {
   border-radius: 100px;
   font-size: 2rem;
 }
-.btn-print {
+.btn-print,
+.btn-pdf {
   color: #adbbbf;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -97,10 +98,12 @@ a {
   outline: none;
   cursor: pointer;
 }
-.btn-print .material-symbols-outlined {
+.btn-print .material-symbols-outlined,
+.btn-pdf .material-symbols-outlined {
   font-size: 2.4rem;
 }
-.btn-print:hover {
+.btn-print:hover,
+.btn-pdf:hover {
   color: #2d373a;
 }
 
@@ -412,6 +415,68 @@ a {
           transform: translateY(1px);
   -webkit-box-shadow: 0 4px 3px rgba(0, 0, 0, 0.07);
           box-shadow: 0 4px 3px rgba(0, 0, 0, 0.07);
+}
+
+.calculator input {
+  border: solid 2px #ebeeef;
+  border-radius: 5px;
+  font-size: clamp(1.8rem, 1vw + 0.6rem, 2rem);
+  padding: 0.8rem 1.5rem;
+  font-family: inherit;
+  font-weight: 400;
+}
+.calculator input:focus {
+  outline: solid 2px #63e6ce;
+}
+.calculator .field-name {
+  font-size: clamp(1.8rem, 1vw + 0.6rem, 2rem);
+  padding: 0 1.4rem 0.4rem 1.6rem;
+  color: #555;
+}
+.calculator .field-name-bold {
+  font-weight: 600;
+}
+.calculator .input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.calculator .input-field__info {
+  color: #888;
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 0 0 1.2rem;
+}
+
+.calc-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.calc-checkbox + label {
+  cursor: pointer;
+}
+
+.calc-checkbox + label:before {
+  content: "";
+  display: inline-block;
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
+  width: 2rem;
+  height: 2rem;
+  border: solid 2px #666;
+  border-radius: 2px;
+}
+
+.calc-checkbox:checked + label:before {
+  background-color: #087f73;
 }
 
 .header {
@@ -803,6 +868,7 @@ a {
   height: -moz-min-content;
   height: min-content;
   max-width: 30rem;
+  min-width: 20rem;
   padding-right: 3rem;
   border-right: solid 1px #708990;
   margin-bottom: 20rem;
@@ -881,6 +947,11 @@ a {
   position: absolute;
   bottom: 0;
   right: 0.2rem;
+}
+.article__head .btn-pdf {
+  position: absolute;
+  bottom: 0;
+  right: 3.4rem;
 }
 .article__text {
   -webkit-column-count: 3;
@@ -1110,8 +1181,13 @@ a {
   -ms-flex-item-align: center;
       align-self: center;
   border-radius: 7px;
-  width: 58rem;
-  height: 75rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.07);
+  max-width: 65%;
+  min-width: 30ch;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   background-color: white;
   position: relative;
   overflow: visible;
@@ -1140,7 +1216,7 @@ a {
 .center .hero__card figure {
   position: relative;
   border-radius: 7px 7px 0 0;
-  height: 53%;
+  height: 40vh;
   width: 100%;
   overflow: hidden;
 }
@@ -1168,7 +1244,7 @@ a {
 .center .hero__card .figcaption figcaption:first-child {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 5rem;
+  font-size: clamp(4rem, 2.5vw + 0.9rem, 6rem);
   margin-bottom: -1rem;
   letter-spacing: 0.15ch;
 }
@@ -1193,7 +1269,7 @@ a {
 }
 .center .hero__card--details p {
   text-align: center;
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 0.8vw + 0.2rem, 2.2rem);
 }
 .center .hero__card--details a {
   font-size: 1.8rem;
@@ -1245,6 +1321,10 @@ a {
   text-align: center;
 }
 .new-ingredients__card {
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1552,4 +1632,79 @@ a {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+}
+
+.product-cost {
+  padding-left: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.product-cost > * {
+  margin-bottom: 8rem;
+}
+.product-cost h1 {
+  margin-bottom: 8rem;
+}
+.product-cost h2 {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  display: block;
+  border-bottom: solid 1px #d6dddf;
+  padding-left: 10rem;
+  margin-left: -9rem;
+}
+.product-cost-ingredients {
+  margin-left: -9rem;
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  font-size: 1.4rem;
+}
+.product-cost-ingredients__checkbox {
+  width: 0;
+  height: 0;
+}
+.product-cost-ingredients__new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.product-cost-ingredients__new--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.product-cost-ingredients__new--info .input-field {
+  padding-left: 4.5rem;
+}
+.product-cost-ingredients__new--consistency {
+  margin-left: 6.4rem;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+.product-cost-ingredients__new--consistency #solid {
+  margin-right: 2rem;
+}
+
+.include {
+  max-width: 9ch;
+  margin-top: 8.8rem;
 }
