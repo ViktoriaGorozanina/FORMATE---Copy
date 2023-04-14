@@ -430,7 +430,7 @@ a {
 }
 .calculator .field-name {
   font-size: clamp(1.8rem, 1vw + 0.6rem, 2rem);
-  padding: 0 1.4rem 0.4rem 1.6rem;
+  padding: 0 1.4rem 0.4rem 0.3rem;
   color: #555;
 }
 .calculator .field-name-bold {
@@ -471,12 +471,70 @@ a {
           transform: translateY(-30%);
   width: 2rem;
   height: 2rem;
-  border: solid 2px #666;
+  border: solid 3px #708990;
   border-radius: 2px;
+  -webkit-transition: 200ms ease-in-out 0s;
+  -o-transition: 200ms ease-in-out 0s;
+  transition: 200ms ease-in-out 0s;
 }
 
 .calc-checkbox:checked + label:before {
   background-color: #087f73;
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
+  border: solid 3px #708990;
+}
+
+.radio {
+  font-size: 1.8rem;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.radio + .radio {
+  margin-left: 2rem;
+}
+
+.radio input[type=radio] {
+  display: none;
+}
+
+.radio input[type=radio]:checked ~ span:after {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+      -ms-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.radio span {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50px;
+  border: solid 3px #708990;
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  cursor: pointer;
+}
+.radio span:after {
+  content: "";
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: #087f73;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+      -ms-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  -webkit-transition: 200ms ease-in-out 0s;
+  -o-transition: 200ms ease-in-out 0s;
+  transition: 200ms ease-in-out 0s;
 }
 
 .header {
@@ -1655,7 +1713,7 @@ a {
   margin-bottom: 3rem;
   display: block;
   border-bottom: solid 1px #d6dddf;
-  padding-left: 10rem;
+  padding-left: 9.2rem;
   margin-left: -9rem;
 }
 .product-cost-ingredients {
@@ -1696,12 +1754,8 @@ a {
   padding-left: 4.5rem;
 }
 .product-cost-ingredients__new--consistency {
-  margin-left: 6.4rem;
+  margin-left: 4.8rem;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
-}
-.product-cost-ingredients__new--consistency #solid {
-  margin-right: 2rem;
 }
 
 .include {
