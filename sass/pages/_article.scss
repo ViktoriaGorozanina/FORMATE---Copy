@@ -57,18 +57,10 @@
   }
 
   &__text {
-    column-count: 3;
-    column-gap: 3.2rem;
+    columns: auto 23ch;
+    column-gap: 3.5rem;
     border-bottom: solid 1px $color-black;
     padding-bottom: 2.4rem;
-    min-width: 39ch;
-
-    @media screen and (max-width: 1200px) {
-      column-count: 2;
-    }
-    @media screen and (max-width: 880px) {
-      column-count: 1;
-    }
 
     & p {
       margin-bottom: 2.4rem;

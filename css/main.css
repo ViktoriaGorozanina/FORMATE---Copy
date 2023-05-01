@@ -492,6 +492,7 @@ a {
   vertical-align: middle;
   position: relative;
   padding-left: 3rem;
+  cursor: pointer;
 }
 
 .radio + .radio {
@@ -1012,29 +1013,14 @@ a {
   right: 3.4rem;
 }
 .article__text {
-  -webkit-column-count: 3;
-     -moz-column-count: 3;
-          column-count: 3;
-  -webkit-column-gap: 3.2rem;
-     -moz-column-gap: 3.2rem;
-          column-gap: 3.2rem;
+  -webkit-columns: auto 23ch;
+     -moz-columns: auto 23ch;
+          columns: auto 23ch;
+  -webkit-column-gap: 3.5rem;
+     -moz-column-gap: 3.5rem;
+          column-gap: 3.5rem;
   border-bottom: solid 1px #001a17;
   padding-bottom: 2.4rem;
-  min-width: 39ch;
-}
-@media screen and (max-width: 1200px) {
-  .article__text {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-  }
-}
-@media screen and (max-width: 880px) {
-  .article__text {
-    -webkit-column-count: 1;
-       -moz-column-count: 1;
-            column-count: 1;
-  }
 }
 .article__text p {
   margin-bottom: 2.4rem;
